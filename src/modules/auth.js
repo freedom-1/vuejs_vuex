@@ -7,4 +7,12 @@ const mutations = {
     state.isLoading = true
   },
 }
-export default { state, mutations }
+
+const actions = {
+  register(context) {
+    setTimeout(() => {
+      context.commit('setLoading')
+    }, 3000)
+  },
+}
+export default { state, mutations, actions }
